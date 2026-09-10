@@ -31,7 +31,6 @@ func generateLine(_ width: Int, _ catPos: Int, _ symbol: String, _ itemCol: Int,
 func generateWalk(_ width: Int, _ steps: Int) {
     var pos = width / 2
     
-    // 分别随机挑一行放置毛线球和小鱼干（全程各仅出现一次）
     let yarnStep = Int.random(in: 1...2)
     let fishStep = Int.random(in: 4...5)
 
@@ -40,7 +39,6 @@ func generateWalk(_ width: Int, _ steps: Int) {
         var itemCol = -1
         var item = ""
         
-        // 当走到对应步数时，在猫咪旁边的空地上放上物品
         if step == yarnStep {
             item = charAt(items, 0)
             itemCol = (pos + 2) % width
